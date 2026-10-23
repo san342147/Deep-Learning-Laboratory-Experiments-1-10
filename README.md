@@ -1,14 +1,14 @@
 # Deep Learning Laboratory
 
-This repository contains the Colab notebook for **Deep Learning Experiments 1–10 and the Mini Project**. The notebook includes experiment instructions, Python code, captured execution outputs, plots, and a final audit/download workflow.
+This repository contains the original all-in-one Colab notebook plus **a separate standalone notebook for each of Experiments 1–10 and the Mini Project**. Each experiment notebook includes the shared dependency/runtime/data setup, its experiment instructions and code, captured execution outputs, plots, and an output check.
 
 ## Notebook
 
-Open `Deep_Learning_Laboratory_Experiments_1-10_and_Mini_Project.ipynb` in Google Colab. A GPU runtime is recommended for the CNN, image-generation, and GAN experiments.
+Open `DL_Exp01.ipynb` through `DL_Exp10.ipynb` or `DL_Mini_Project.ipynb` in Google Colab to run a single lab section. `Deep_Learning_Laboratory_Experiments_1-10_and_Mini_Project.ipynb` preserves the complete original sequence. A GPU runtime is recommended for the CNN, image-generation, and GAN experiments.
 
 1. Choose **Runtime → Change runtime type → T4 GPU** when available.
-2. Run the notebook from the first cell in order; the setup cell installs its additional packages.
-3. Confirm the final audit passes, then run the last packaging cell to download the generated datasets, models, metrics, and plots ZIP from the active Colab runtime.
+2. In a standalone notebook, run its setup cells in order; setup installs packages and imports the lab datasets before the experiment cell.
+3. Confirm the notebook's output check passes. For a complete set of generated files, use the original all-in-one notebook's final audit and ZIP packaging cells.
 
 ## Contents
 
@@ -23,6 +23,8 @@ Open `Deep_Learning_Laboratory_Experiments_1-10_and_Mini_Project.ipynb` in Googl
 - Experiment 9: LSTM text generation
 - Experiment 10: GAN with quantitative evaluation
 - Mini project: CIFAR-10 baseline MLP versus advanced CNN
+
+Each single-experiment notebook is named `DL_ExpNN.ipynb`; the CIFAR-10 mini project is `DL_Mini_Project.ipynb`. The setup cells are intentionally repeated so each file can be opened and run independently. Dataset setup imports the course's documented lab datasets and may take several minutes.
 
 The notebook uses a mix of complete datasets and explicitly documented lab-sized subsets to keep Colab runs practical. The dataset manifest and code describe the sources and subset sizes. Downloaded runtime files under `/content/Deeplearning` are temporary; preserve the generated ZIP if you need model and dataset artifacts outside the current session.
 
